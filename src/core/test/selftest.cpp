@@ -36,7 +36,7 @@ void testBoardValid(const Board &b) {
   if (copied.bbBlack != b.bbBlack) {
     panic("bbBlack is incorrect");
   }
-  for (cell_t i = 0; i < Board::BB_PIECES_SZ; ++i) {
+  for (cell_t i = 0; i < static_cast<cell_t>(Board::BB_PIECES_SZ); ++i) {
     if (copied.bbPieces[i] != b.bbPieces[i]) {
       panic("bbPieces[" + std::to_string(i) + "] is incorrect");
     }
